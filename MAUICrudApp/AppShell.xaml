@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MAUICrudApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:MAUICrudApp.Views"
+    xmlns:dashboardPages="clr-namespace:MAUICrudApp.Views.Dashboard"
+    xmlns:viewModels="clr-namespace:MAUICrudApp.ViewModels"
+    xmlns:icons="clr-namespace:MAUICrudApp.Common"
+    Shell.FlyoutBehavior="Flyout"
+    Shell.BackgroundColor="{StaticResource AppColor}"
+    Shell.TitleColor="White"
+    Title="MAUICrudApp"
+    FlyoutBackgroundColor="{StaticResource AppColor}"
+    Shell.TabBarIsVisible="False">
+    
+    <ShellContent
+        Title="Login"
+        FlyoutItemIsVisible="False"
+        Shell.FlyoutBehavior="Disabled"
+        ContentTemplate="{DataTemplate views:StudentListPage}"
+        Route="MainPage" />
+    <!--<FlyoutItem Route="DashboardPage" FlyoutDisplayOptions="AsMultipleItems" >
+        <ShellContent
+            Title="Dashboard"
+            Icon="{x:Static icons:Icon.Dashboard}"
+            ContentTemplate="{DataTemplate dashboardPages:DashboardPage}"
+            />
+        --><!--<ShellContent
+            Title="Login"
+            Icon="{x:Static icons:Icon.Login}"
+            ContentTemplate="{DataTemplate views:LoginPage}"
+            />--><!--
+    </FlyoutItem>
+    <Shell.FlyoutFooter>
+        <StackLayout Padding="20">
+            <Button Text="Sign Out" Command="{Binding SignOutCommand}"/>
+        </StackLayout>
+    </Shell.FlyoutFooter>-->
+</Shell>

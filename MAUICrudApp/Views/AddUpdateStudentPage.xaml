@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUICrudApp.Views.AddUpdateStudentPage"
+             Shell.BackgroundColor="Navy"
+             Shell.TitleColor="White"
+             Title="Add / Update Student">
+    <VerticalStackLayout Margin="10" Spacing="10">
+        <VerticalStackLayout
+            Spacing="0">
+            <Label Text="Name" FontSize="Small"/>
+            <Entry Text="{Binding StudentDetail.Name}" Placeholder="Enter Name" FontSize="Small"/>
+        </VerticalStackLayout>
+        
+        <VerticalStackLayout
+            Spacing="0">
+            <Label Text="Gender" FontSize="Small"/>
+            <Entry Text="{Binding StudentDetail.Gender}" Placeholder="Enter Gender" FontSize="Small"/>
+        </VerticalStackLayout>
+        
+        <VerticalStackLayout
+            Spacing="0">
+            <Label Text="Email" FontSize="Small"/>
+            <Entry Text="{Binding StudentDetail.Email}" Placeholder="Enter Email" FontSize="Small"/>
+        </VerticalStackLayout>
+        
+        <Button Command="{Binding AddUpdateStudentCommand}" Text="Save"/>
+    </VerticalStackLayout>
+</ContentPage>
